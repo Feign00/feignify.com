@@ -3,57 +3,45 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <header class="header">
-    <div class="container header__container">
-      <RouterLink to="/" class="header__logo">TravelLog</RouterLink>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li><RouterLink to="/" class="header__link" v-scramble>Home</RouterLink></li>
-          <li><RouterLink to="/map" class="header__link" v-scramble>Map</RouterLink></li>
-          <li><RouterLink to="/gallery" class="header__link" v-scramble>Gallery</RouterLink></li>
-          <li><RouterLink to="/about" class="header__link" v-scramble>About</RouterLink></li>
+  <header class="sticky top-0 z-50 h-16 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="container mx-auto h-full flex items-center justify-between px-4">
+      <RouterLink to="/" class="text-2xl font-extrabold text-blue-600 tracking-tight hover:opacity-80 transition-opacity">
+        TravelLog
+      </RouterLink>
+      <nav>
+        <ul class="flex gap-8 items-center">
+          <li>
+            <RouterLink to="/" class="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group" active-class="text-blue-600" v-scramble>
+              Home
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/map" class="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group" active-class="text-blue-600" v-scramble>
+              Map
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/gallery" class="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group" active-class="text-blue-600" v-scramble>
+              Gallery
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/logs" class="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group" active-class="text-blue-600" v-scramble>
+              Logs
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/profile" class="font-medium text-gray-700 hover:text-blue-600 transition-colors relative group" active-class="text-blue-600" v-scramble>
+              Profile
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </RouterLink>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
-
-<style scoped>
-.header {
-  height: var(--header-height);
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-primary);
-}
-
-.header__menu {
-  display: flex;
-  gap: 2rem;
-}
-
-.header__link {
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.header__link:hover,
-.header__link.router-link-active {
-  color: var(--color-primary);
-}
-</style>
