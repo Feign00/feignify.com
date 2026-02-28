@@ -1,26 +1,5 @@
 export const regions = [
   {
-    id: 'japan',
-    name: 'Japan',
-    coordinates: [36.2048, 138.2529],
-    description: 'A land of contrasts, where ancient traditions blend seamlessly with modern technology. From the bustling streets of Tokyo to the serene temples of Kyoto.',
-    coverImage: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop'
-  },
-  {
-    id: 'iceland',
-    name: 'Iceland',
-    coordinates: [64.9631, -19.0208],
-    description: 'The land of fire and ice. Dramatic landscapes featuring volcanoes, geysers, hot springs, and lava fields.',
-    coverImage: 'https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2159&auto=format&fit=crop'
-  },
-  {
-    id: 'italy',
-    name: 'Italy',
-    coordinates: [41.8719, 12.5674],
-    description: 'Known for its rich history, art, culture, architecture, and of course, its delicious cuisine.',
-    coverImage: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=2186&auto=format&fit=crop'
-  },
-  {
     id: 'guangxi',
     name: 'Guangxi, China',
     coordinates: [23.8298, 108.7881],
@@ -37,36 +16,6 @@ export const regions = [
 ];
 
 export const photos = [
-  {
-    id: 1,
-    url: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop',
-    caption: 'Shibuya Crossing, Tokyo',
-    regionId: 'japan'
-  },
-  {
-    id: 2,
-    url: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop',
-    caption: 'Mount Fuji',
-    regionId: 'japan'
-  },
-  {
-    id: 3,
-    url: 'https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=2159&auto=format&fit=crop',
-    caption: 'Kirkjufell Mountain',
-    regionId: 'iceland'
-  },
-  {
-    id: 4,
-    url: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=2186&auto=format&fit=crop',
-    caption: 'Cinque Terre',
-    regionId: 'italy'
-  },
-  {
-    id: 5,
-    url: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=2183&auto=format&fit=crop',
-    caption: 'Venice Canals',
-    regionId: 'italy'
-  },
   { id: 6, url: '/imgs/IMG_6871.JPEG', caption: '中国湖南风景 1', regionId: 'changsha' },
   { id: 7, url: '/imgs/IMG_6875.JPEG', caption: '中国湖南风景 2', regionId: 'changsha' },
   { id: 8, url: '/imgs/IMG_7550.JPEG', caption: 'Guangxi Scenery 3', regionId: 'guangxi' },
