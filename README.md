@@ -1,38 +1,46 @@
-# Feign Travel Blog (TravelLog)
+﻿# Feign Travel Blog
 
-一个基于 Vue 3 + Vite 的个人旅行博客系统，用于记录足迹、分享照片和旅行日志。
+一个基于 Vue 3 + Vite 的旅行博客项目，用于展示旅行地图、照片画廊和旅行日志。
 
-## ✨ 项目特色
+## 项目特性
 
-- **🗺️ 交互式地图**: 使用 Leaflet 集成地图，可视化展示旅行足迹。
-- **🖼️ 沉浸式图库**: 支持按地区筛选的响应式照片墙。
-- **📝 旅行日志**: 记录旅途中的点点滴滴（开发中）。
-- **🎨 现代化 UI**: 采用 TailwindCSS v4 打造的响应式、极简风格界面。
-- **⚡ 极速体验**: 基于 Vite 构建，秒级启动。
+- 交互式地图：基于 Leaflet 展示旅行区域与轨迹入口
+- 区域详情页：按地区浏览照片与简介信息
+- 旅行画廊：集中查看旅行图片
+- 日志与个人页面：预留内容扩展入口
+- 现代前端栈：Vue 3 + Vue Router + Pinia + TailwindCSS + Vite
 
-## 🛠️ 技术栈
+## 技术栈
 
-- **核心框架**: [Vue 3](https://vuejs.org/) (Composition API + `<script setup>`)
-- **构建工具**: [Vite](https://vitejs.dev/)
-- **样式方案**: [TailwindCSS v4](https://tailwindcss.com/)
-- **路由管理**: [Vue Router 4](https://router.vuejs.org/)
-- **状态管理**: [Pinia](https://pinia.vuejs.org/)
-- **地图组件**: [Leaflet](https://leafletjs.com/)
+- Vue 3
+- Vite
+- Vue Router 4
+- Pinia
+- TailwindCSS 4
+- Leaflet
 
-## 📂 目录结构
+## 目录结构
 
+```text
+travel-blog/
+├─ public/
+│  └─ imgs/                 # 旅行图片资源
+├─ src/
+│  ├─ assets/               # 全局样式与静态资源
+│  ├─ components/           # 公共组件（Header/Footer/Map 等）
+│  ├─ data/                 # 页面使用的数据（地区、照片等）
+│  ├─ directives/           # 自定义指令
+│  ├─ pages/                # 页面组件
+│  ├─ router/               # 路由配置
+│  ├─ store/                # Pinia 状态管理
+│  ├─ App.vue
+│  └─ main.js
+├─ index.html
+├─ package.json
+└─ vite.config.js
 ```
-src/
-├── assets/          # 静态资源 & 全局样式
-├── components/      # 公共组件 (Header, Footer, Map, etc.)
-├── data/            # 模拟数据 (旅行足迹, 照片信息)
-├── pages/           # 页面级组件 (Home, Gallery, Logs, etc.)
-├── router/          # 路由配置
-├── store/           # Pinia 状态管理
-└── utils/           # 工具函数
-```
 
-## 🚀 快速开始
+## 本地开发
 
 ### 1. 安装依赖
 
@@ -40,37 +48,51 @@ src/
 npm install
 ```
 
-### 2. 启动开发服务器
+### 2. 启动开发环境
 
 ```bash
 npm run dev
 ```
 
-### 3. 项目打包
+默认情况下，Vite 会输出本地访问地址（通常是 `http://localhost:5173`）。
+
+### 3. 生产构建
 
 ```bash
 npm run build
 ```
 
-## � 更新日志
+构建产物输出到 `dist/` 目录。
 
-### v1.0.1 (2026-02-28)
-- ✅ 修复 Leaflet 地图标记（marker）显示问题，使用 CDN 加载默认图标资源
-- ✅ 移除日本、冰岛、意大利的地区数据和相关照片
-- ✅ 优化地图组件，确保标记正确显示和交互
+### 4. 本地预览构建结果
 
-### v1.0.0 
-- 初始版本发布
-- 完成地图、图库、日志等核心功能
+```bash
+npm run preview
+```
 
-## 🌍 当前支持的地区
+## 页面路由
 
-目前支持以下旅行地区：
-- **广西中国** - 以其独特的喀斯特地貌著称
-- **湖南中国** - 以辛辣美食和丰富的历史文化而闻名
+- `/`：首页
+- `/map`：旅行地图
+- `/region/:id`：区域详情
+- `/gallery`：图片画廊
+- `/logs`：旅行日志
+- `/profile`：个人页
 
-## 📄 版权说明
+## 当前数据范围
 
-&copy; 2026 Feign. All rights reserved.
-[陇ICP备2025016955号](https://beian.miit.gov.cn/)
+目前数据主要包含以下区域：
 
+- Guangxi, China
+- Hunan, China
+
+相关数据文件位于 `src/data/travelData.js`。
+
+## 说明
+
+- 本项目当前使用本地静态图片与本地数据文件驱动页面。
+- 如需扩展到后端接口，可优先从 `src/data/` 数据层替换开始。
+
+## License
+
+Copyright (c) 2026 Feign
